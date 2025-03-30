@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Review Hub</h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for a movie..." onkeyup="searchMovies()">
+        </div>
+    </header>
+    <main>
+        <section id="movie-list">
+            <div class="movie-list-img">
+                <h2>Movies</h2>
+                <img src="images/movie.svg" alt="">
+            </div>
+            <div class="movies-grid" id="movies-grid">
+                <div class="movie-card" data-title="Avengers: Endgame">
+                    <img src="images/avengers.jpeg" alt="">
+                    <a href="https://www.awafim.tv/titles/587841846953250924-avengers-endgame/download-0-0">Avengers: Endgame</a>
+                </div>
+                <div class="movie-card" data-title="Spider-Man: No Way Home">
+                    <img src="images/spiderman.jpeg" alt="">
+                    <a href="https://www.awafim.tv/titles/206918944827776585-spider-man-no-way-home/download-0-0">Spider-Man: No Way Home</a>
+                </div>
+                <div class="movie-card" data-title="Harry Potter and the Philosopher's Stone">
+                    <img src="images/harrypotter.jpeg" alt="">
+                    <a href="https://www.awafim.tv/titles/657227439323354257-harry-potter-and-the-philosophers-stone/download-0-0">Harry Potter and the Philosopher's Stone</a>
+                </div>
+                <div class="movie-card" data-title="Furious 7">
+                    <img src="images/fasffurious2.jpeg" alt="">
+                    <a href="https://www.awafim.tv/titles/636461883246909722-fast-furious-7/download-0-0">Furious 7</a>
+                </div>
+                <div class="movie-card" data-title="Avatar: The Way of Water">
+                    <img src="images/avatar.jpeg" alt="">
+                    <a href="https://www.awafim.tv/titles/68944654929894814-avatar-water/download-0-0">Avatar: The Way of Water</a>
+                </div>
+                <div class="movie-card" data-title="Red Notice">
+                    <img src="images/Rednotice.jpeg" alt="">
+                    <a href="https://www.awafim.tv/titles/250224901850535818-red-notice/download-0-0">Red Notice</a>
+                </div>
+                <div class="movie-card" data-title="Black Panther: Wakanda Forever">
+                    <img src="images/blackpanther.jpeg" alt="">
+                    <h3>Black Panther: Wakanda Forever</h3>
+                </div>
+                <div class="movie-card" data-title="The Flash">
+                    <img src="images/flash.jpeg" alt="">
+                    <a href="https://www.awafim.tv/titles/996809799133959504-the-flash">The Flash</a>
+                </div>
+                <div class="movie-card" data-title="The Lion King">
+                    <img src="images/lionking.jpeg" alt="">
+                    <a href="https://www.awafim.tv/titles/557031140448408729-lion-king/download-0-0">The Lion King</a>
+                </div>
+                <div class="movie-card" data-title="The Lord of the Rings: The Two Towers">
+                    <img src="images/lordofrings.jpeg" alt="">
+                    <a href="https://www.awafim.tv/titles/651037941031900685-the-lord-of-the-rings-the-two-towers/download-0-0">The Lord of the Rings: The Two Towers</a>
+                </div>
+                <div class="movie-card" data-title="Venom">
+                    <img src="images/venom.jpeg" alt="">
+                    <a href="https://www.awafim.tv/titles/658832357469589616-venom/download-0-0">Venom</a>
+                </div>
+                <div class="movie-card" data-title="Jumanji: The Next Level">
+                    <img src="images/jumanji.jpeg" alt="">
+                    <a href="https://www.awafim.tv/titles/481451197245559641-jumanji-the-next-level/download-0-0">Jumanji: The Next Level</a>
+                </div>
+                <div class="movie-card" data-title="Aquaman">
+                    <img src="images/aquaman.jpeg" alt="">
+                    <a href="https://www.awafim.tv/titles/632881683372315625-aquaman/download-0-0">Aquaman</a>
+                </div>
+                <div class="movie-card" data-title="Star Wars Ep. VII: The Force Awakens">
+                    <img src="images/lucifer.jpg" alt="">
+                    <a href="https://www.awafim.tv/titles/580399877301869391-lucifer/S06/E10/download-0-0">Lucifer</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="review-form">
+            <h2>Write a Review</h2>
+            <form id="review-form-element" onsubmit="submitReview(event)">
+                <div class="form-group">
+                    <label for="movie-title">Movie Title</label>
+                    <select id="movie-title" required>
+                        <!-- Options populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating (1-5)</label>
+                    <input type="number" id="rating" min="1" max="5" required>
+                </div>
+                <div class="form-group">
+                    <label for="review-text">Your Review</label>
+                    <textarea id="review-text" placeholder="What did you think?" required></textarea>
+                </div>
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+
+        <section id="recommendations">
+            <h2>Recommended Movies</h2>
+            <div class="movies-grid" id="recommended-movies">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Movie Review Hub. Lights, camera, action!</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
