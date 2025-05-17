@@ -1,3 +1,4 @@
+/* Reset default browser styles to ensure consistency across all elements */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@
   font-family: Arial, sans-serif;
 }
 
+/* Set up the body with a background image and text color */
 body {
   background-image: url(images/Netflix_bg_image.jpg);
   background-size: cover;
@@ -12,19 +14,23 @@ body {
   color: #fff;
 }
 
+/* Style the header where the title and search bar live */
 header {
   padding: 1em;
   text-align: center;
 }
 
+/* Make the header title big and bold */
 header h1 {
   font-size: 2em;
 }
 
+/* Position the search bar with some space above it */
 .search-bar {
   margin-top: 1em;
 }
 
+/* Style the search input box */
 .search-bar input {
   padding: 0.8em;
   width: 100%;
@@ -34,12 +40,14 @@ header h1 {
   font-size: 1em;
 }
 
+/* Style the main content area where all sections live */
 main {
   max-width: 1200px;
   margin: 2em auto;
   padding: 0 1em;
 }
 
+/* Style each section (like movie list or review form) */
 section {
   background-color: #2a2a2a;
   padding: 1.5em;
@@ -47,28 +55,33 @@ section {
   border-radius: 8px;
 }
 
+/* Style the headings inside sections */
 section h2 {
   margin-bottom: 1em;
   color: #e50914;
 }
 
+/* Size the small movie icon next to the "Movies" title */
 .movie-list-img img {
-   width: 40px;
-   margin-bottom: 40px;
+  width: 40px;
+  margin-bottom: 40px;
 }
 
+/* Arrange the movie list title and icon side by side */
 .movie-list-img {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+/* Set up a grid for the movie cards */
 .movies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1em;
 }
 
+/* Style each movie card */
 .movie-card {
   background-color: #3a3a3a;
   padding: 0.5em 1.5em;
@@ -78,30 +91,42 @@ section h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
 }
 
+/* Add a zoom effect when hovering over a movie card */
+.movie-card:hover {
+  transform: scale(1.05); 
+}
+
+/* Style the links inside movie cards */
 .movie-card a {
   margin: 0.5em 0;
   text-decoration: none;
   font-size: 1.2em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: #fff;
 }
 
+/* Add a hover effect to movie card links */
 .movie-card a:hover {
   text-decoration: underline;
   color: red;
 }
 
+/* Space out the form elements in the review section */
 .form-group {
   margin-bottom: 1.5em;
 }
 
+/* Style the labels above form inputs */
 .form-group label {
   display: block;
   margin-bottom: 0.5em;
   color: #fff;
 }
 
+/* Style all form inputs, dropdowns, and textareas */
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -114,10 +139,12 @@ section h2 {
   color: #fff;
 }
 
+/* Set a specific height for the review textarea */
 .form-group textarea {
   height: 100px;
 }
 
+/* Style the submit button */
 button {
   padding: 0.8em 1.5em;
   background-color: #e50914;
@@ -127,10 +154,12 @@ button {
   cursor: pointer;
 }
 
+/* Change button color on hover */
 button:hover {
   background-color: #c50812;
 }
 
+/* Style the footer at the bottom */
 footer {
   background-color: #2a2a2a;
   color: white;
